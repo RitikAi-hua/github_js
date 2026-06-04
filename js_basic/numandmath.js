@@ -9,7 +9,7 @@ const balance=new Number(400)
 const otherNumber=23.0322
 //console.log(otherNumber.toPrecision(3))//23.0
 const hundreds =1000000
-// console.log(hundreds.toLocalString());//1,000,000
+// console.log(hundreds.toLocaleString());//1,000,000
 // console.log(hundreds.toLocalString('en-IN'));//1,000,000
 //to acquire min and max value
 //Number.MIN_VALUE and Number.MAX_VALUE
@@ -26,4 +26,5 @@ let random=Math.floor(Math.random()*10)+1;
 console.log(random);
 const max=20
 const min=10
-console.log(Math.floor(Math.random()*(max-min +1))+min)
+//console.log(Math.floor(Math.random()*(max-min +1))+min)
+console.log(Date.now())
