@@ -1,4 +1,5 @@
-//singleton
+//singleton object const tinderuser=new Object()
+//non singleton const tinderUser={}
 
 //object literals
 //Object.create
@@ -35,3 +36,6 @@ console.log("Namaste!")
 
 console.log(jsUser.greeting());// without() gives function anonymous not execute but reference of fxn with() gives value of function and undefined
 console.log(jsUser.greetingTwo());
+//deleting property
+delete jsUser.location;
+console.log(jsUser)
