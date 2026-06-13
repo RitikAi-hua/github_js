@@ -38,6 +38,26 @@ const obj2={
  user[1].email //[1] is email
 
  //to access key similarly for values, for both entries()
- console.log(Object.keys(details))
+//  console.log(Object.keys(details))
  //check key exist 
  console.log(details.hasOwnProperty('isLoggedIn'));
+ const course={
+    courseName:"js hindi",
+    price:999,
+    courseInstructor:"hitesh"
+ }
+
+//  const {courseInstructor}=course
+ const {courseInstructor:Instructor}=course
+ console.log(Instructor)
+
+
+//  const navbar=({company})=>{ //curly brace means destructure
+
+//  }
+//  navbar(comapny="hitesh")
+
+// api =in basic our works assign to other 
+// json =javascripts object notation 
+// keys and values both are string format
+// {},[{},{}..]
