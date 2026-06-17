@@ -245,3 +245,6 @@ function handleObject(anyobject){
  }
  //similarly array passing as object
  handleObject(["Ritik",100])
+
+
+ 
