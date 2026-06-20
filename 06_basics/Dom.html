@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom learning</title>
+<style>
+    .bg-black{
+        background-color:black;
+        color:white;
+    }
+    .to{
+        background-color: rgb(57, 1, 1);
+    }
+</style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1 id="title" class="heading">DOM learning on chai aur code</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <div class="to">
+        <h2>Lorem ipsum dolor sit1.</h2>
+        <h2>Lorem ipsum dolor sit2.</h2>
+        <h2>Lorem ipsum dolor sit3.</h2>
+        <h2>Lorem ipsum dolor sit4.</h2>
+        </div>
+    </div>
+    <ul>
+        <li class="items">one</li>
+        <li class="items">two</li>
+        <li class="items">three</li>
+    </ul>
+    <h1>This much for today</h1>
+    <input type="password" name="" id="">
+    <script>
+    //     const nodelist=document.querySelectorAll('li')
+    //     nodelist.forEach((li)=>{
+    // li.style.background='grey'
+    const item=document.getElementsByClassName('items')//return HTML COLLECTION/list item
+    const cvtarray=Array.from(item)
+    cvtarray.forEach((li)=>{
+      li.style.color='orange'
+//it will not work by foreach make yhem work by convert into Array Array.from(classname)
+    })
+
+
+// })
+    </script>
+</body>
+</html>
+
+//document.getElementById("").
+//.id,.class(undefined),.className,.getAttributes('id,class'),.setAttributes('id','idname','class','classname')(overwrite)
+//.innerHTML,
+
+//we can store getElementById value into variable
+//const variable=document.getElementById('title')
+now we can easily perform all above operation by just writing title.
+innertext                         textcontent
+display on appear text from web   display hidden text also(style.display='none')
+
+innerHTML provide all related values like text,tags,stylewith value
+getElementByClassName('')
+It allows you to select HTML elements using CSS selectors.
+//QuerySelector function select only return first match 
+document.querySelector('tag')
+document.querySelector('.class')
+document.querySelector('#id')
+const input = document.querySelector('[type="email"]');
+//QuerySelectorAll select all element based on match either class id tag
+document.querySelectorAll('tag')
+document.querySelectorAll('.class')
+document.querySelectorAll('#id')
+const input = document.querySelectorAll('[type="email"]');//Select by Attribute
+we can perform query inside another query like 
+const myul=document.querySelector('ul')first return all list unorderlist 
+const myli=myul.querySelector('li') then list of unorder
+
+const myul=document.querySelector('ul')
+undefined
+const myli=myul.querySelector('li')
+undefined
+myli.innerHTML=Ritik
+myli.innerHTML="Ritik"
+'Ritik'
+
+if no match found return none
+
+All query return static nodelist similar to array but not array
+no map reduce filter support foreach support
+
+modelist.forEach(function(li){
+    li.style.background='green'
+})
