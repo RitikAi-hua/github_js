@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:black; color:whitesmoke">
+   <ul class="ritik">
+    <li>java</li>
+    <li>javaScript</li>
+    <li>python</li>
+   </ul> 
+</body>
+<script>
+    function addLanguage(langName){
+        const li=document.createElement('li');
+       li.innerHTML=langName
+       document.querySelector('.ritik').appendChild(li)
+
+    };
+    function addoptLanguage(langName){
+        const li=document.createElement('li');
+       li.appendChild(document.createTextNode(langName))
+       document.querySelector('.ritik').appendChild(li)
+    }
+    addoptLanguage('golang')
+
+    //Edit 
+    const secLang=document.querySelector("li :nth-child(2)")
+    const newli=document.creatElement('li')
+    newli.textContent="Mojo"
+    secLang.replaceWith(newli)
+
+    //Edit2
+    const firstLang=document.querySelector("li:first-child")
+    firstlang.outerHTML='<li>TypeScript</li>'
+
+    //remove
+    const lastLang=document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>
