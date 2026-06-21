@@ -1,7 +1,7 @@
 # projects related to DOM
 
 ## project link
-[click here](link)
+[click here](/workspaces/github_js/07_projects/project01.html)
 
 # Solution code
 
