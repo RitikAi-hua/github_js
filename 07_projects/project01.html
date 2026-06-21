@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+div .button{
+    display:inline-block;
+    width:100px;
+    height:100px;
+    margin-left:60px;
+    border:2px solid black;
+    cursor:pointer;
+}
+ #grey{
+background-color: grey;
+}
+ #white{
+background-color: white;
+}
+ #blue{
+background-color: blue;
+}
+ #yellow{
+background-color: yellow;
+}
+
+nav{
+
+    display:flex;
+   margin-top:30px;
+justify-content:space-between;
+}
+.first{
+    border: 1px solid black;
+    margin:auto;
+    padding:0 50px; 
+}
+.second{
+    border: 1px solid black;
+    margin:auto;
+    padding:0 50px; 
+}
+/* .h3{
+    margin-left:10%;
+} */
+div h3{
+    color:rgb(41, 29, 29);
+}
+hr{
+    border: 2px solid black;
+    margin-top:40px;
+}
+</style>
+</head>
+<body>
+    <nav>
+        <div class="first">
+            <a href="#"><h4>Home</h4></a>
+        </div>
+        <div class="second">
+            <h4>Link</h4>
+        </div>
+       
+    </nav>
+     <hr>
+    <div>
+   <h1 style="margin-left:60px">Color Scheme Switcher</h1>
+    <span class="button" id="grey"></span>
+    <span class="button" id="white"></span>
+    <span class="button" id="blue"></span>
+    <span class="button" id="yellow"></span>
+    </div>
+    <div class="h3">
+    <h3>Try clicking on the colors above</h3>
+    <h3>to change the background color of this page!</h3>
+    </div>
+    
+</body>
+<script>
+const buttons=document.querySelectorAll('.button')//nodelist
+const body=document.querySelector('body');
+//console.log(buttons[0].id)
+//function click(color){
+    buttons.forEach((button)=>{
+    button.addEventListener("click",(e)=>{
+        body.style.backgroundColor=button.id;
+        console.log(e);
+        console.log(e.target);
+    })
+    
+    
+})
+//}
+</script>
+</html>
