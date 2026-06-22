@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+           box-shadow: 10px 10px 8px #888888;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+         label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input{
+            width:100%;
+            padding:10px;
+            box-sizing:border-box;
+            margin-bottom:15px;
+        }
+        button{
+            width:100%;
+            padding:12px;
+            cursor:pointer;
+            font-size:16px;
+            border-radius: 2px;
+        }
+        result{
+            margin-top:20px;
+            text-align:center;
+        }
+        .guide{
+            margin-top:25px;
+        }
+    </style>
+</head>
+<body>
+    <!-- for apply submit event listner use <form></form> -->
+    <h1>BMI Calculator</h1>
+    <label for="weight">Human's weight in KG:</label>
+    <input type="number" class="value1" min="1" placeholder="your weight.." required>
+    <br>
+    <br>
+    <label for="height">Human's height in CM:</label>
+    <input type="number" class="value2" min="1" placeholder="your height.." >
+    <br>
+    <br>
+    <button class="button">calculate</button>
+   <div class="guide">
+    <h4>BMI Weight Guide</h4>
+    <p>Under Weight =Less than 18.6</p>
+    <p>Normal Range=18.6 and 24.9</p>
+    <p>Overweight=Greater than 24.9</p>
+</div>
+    <h1 class="result"></h1>
+
+</body>
+<script>
+    const click=document.querySelector('.button');
+    const result=document.querySelector('.result');
+    //this usecase will give you empty value as when page loaded there is not value inside field 
+    // const value1=Number(document.querySelector('.value1').value);
+    //  const value2=Number(document.querySelector('.value2').value);
+
+    click.addEventListener("click",()=>{
+        const value1=Number(document.querySelector('.value1').value);
+        const value2=Number(document.querySelector('.value2').value);
+
+        if(value1<=0 || value2<=0){
+            result.textContent='please enter valid values.'
+        }
+        const valueM=value2/100;
+
+         const bmi=value1/(valueM*valueM)
+         let category = '';
+
+            if (bmi < 18.6) {
+                category = 'Underweight';
+            } else if (bmi <= 24.9) {
+                category = 'Normal';
+            } else {
+                category = 'Overweight';
+            }
+
+    
+         result.textContent=`Your BMI is ${bmi.toFixed(2)} (${category})`;
+        //   click.addEventListener("submit",()=>{
+    });
+
+</script>
+</html>
