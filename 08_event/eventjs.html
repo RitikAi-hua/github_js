@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="class" id="owls">WHe</h1>
+    <ul class="image" id="prop">
+        <li class="img" >the</li>
+        <li class="img" id="owl">sha</li>
+        <li class="img">tha</li>
+        <li id="link"><a href="https://www.google.com/?zx=1782233188402" alt="">Google</a></li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('prop').addEventListener('click',()=>{
+    //     console.log("clicked inside the ul");
+    // },false);//flase default allows to propagate to parent element(bubbling effect occur bottom to top)
+    // //true stop bubbling event enable capturing mode(parent to child wheter click specified element inside parent )
+    // document.getElementById('owl').addEventListener('click',(e)=>{
+    //     console.log("owl clicked");
+    //     e.stopPropagation();
+    // },false); //when false .stopPropagation()apply below to child prevent from moving to parent when child clicked
+    //addEventListener is best to use inplace of onclick=fxn() because it provide more function and allow propagation
+    //defination is attach the event handler to the specific html element without overwriting the existing event handler
+    //attachEvent()//jQuery-
+// document.getElementById('link').addEventListener('click',(e)=>{
+//         console.log("google clicked");
+//         e.preventDefault();
+//         e.stopPropagation();
+//     },false);
+//   we can access by tagname
+
+document.querySelector('#prop').addEventListener("click", (e) => {
+      console.log(e.target.parentNode); e.target.tagName=="IMG"
+    //   let removeit=e.target.parentNode;
+    //    removeit.remove()
+    //removeit.parentNode.removeChild(removeit)
+        //   e.target.style.display = "none";
+        //   console.log("google clicked");
+        //   e.preventDefault();
+        //   e.stopPropagation();
+        },false);
+    // what is event object?
+    // when an event occurs(click,press,submit,etc.)javascript automatically creates an event object and passes it to the event handler
+// The event object contains information about:
+
+// Which event happened
+// Which element triggered it
+// Mouse position
+// Keyboard key pressed
+// Preventing default behavior
+// Stopping event bubbling                bubbling up event propagate from nicche se upper
+//************Event property********
+// .type event type
+// .target which element clicked
+// .currentTarget element with listener 
+// .preventDefault()==stop form submission
+// .stopPropagation stop bubbling(prevent from traveling to parent element)
+//.clientX,.clientY-horizontal and vertical mouse position
+//.key which key pressed
+//.timestamp
+//,toElement, srcElement,screenX,screenY
+//altkey,ctrlKey,shiftKey,keyCode
+</script>
+</html>
