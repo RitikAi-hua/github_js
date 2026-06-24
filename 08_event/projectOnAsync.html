@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ritik and life</h1>
+    <button class="stop">Stop</button>
+</body>
+<script>
+    const changeText =function change(){
+    const cont=document.querySelector('h1');
+         cont.innerHTML="Best Js series"
+    }
+
+    const changeMe=setTimeout( changeText,5000)//2000=2 sec,5000=5sec after then execution
+    //
+        const cont=document.querySelector('.stop');
+        cont.addEventListener('click',()=>{
+                     clearTimeout(changeMe)
+                     console.log("stopped");
+        });
+           // clearTimeout(changeMe)
+</script>
+</html>
