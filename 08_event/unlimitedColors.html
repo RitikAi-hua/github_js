@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ritik and life</h1>
+    <h1 class="clock"></h1>
+    <button class="start">Start</button>
+    <button class="stop">Stop</button>
+    <!-- <button class="time">Time</button> -->
+</body>
+<script>
+     const randomcolor=function(){
+        const hex="0123456789ABCDEF"
+        let color='#'
+        
+        for(let i=0; i<6; i++){
+            let collect=hex[Math.floor(Math.random()*hex.length)];
+             color=color+collect;
+        }
+        return color;
+
+     };
+     let intervalId;
+     const startchange=function(){
+        if(!intervalId){ //intervalId==empty/nothing/null
+        intervalId=setInterval(changebgcolor,1000);
+        }
+     };
+        function changebgcolor(){
+            document.body.style.backgroundColor=randomcolor()
+     };
+    
+     const stopchange=function(){
+            clearInterval(intervalId)
+            intervalId=null; //dereference from setinterval
+     }
+     document.querySelector(".start").addEventListener('click',startchange)
+
+     document.querySelector(".stop").addEventListener('click',stopchange)
+     
+    // const changeText =function change(){
+    // const cont=document.querySelector('h1');
+    //      cont.innerHTML="Best Js series"
+    // }
+    //  const cont2=document.querySelector('.start');
+    // cont2.addEventListener('click',()=>{
+    //         changeMe=setTimeout( changeText,5000)
+    //         console.log("start")
+    //     });
+    // let changeMe //2000=2 sec,5000=5sec after then execution
+    // //
+    //     const cont=document.querySelector('.stop');
+    //     cont.addEventListener('click',()=>{
+    //                  clearTimeout(changeMe)
+    //               clearInterval(timestop)
+    //                  clearInterval(colorStop)
+    //                  timestop=null;
+    //                  colorStop=null;
+    //                  console.log("stopped");
+
+    //     });
+    //     const time=document.querySelector('.time')
+    //     const display=document.querySelector('.clock')
+    //     const show=function(){
+    //         const date=new Date();
+    //         display.innerHTML=date.toLocaleTimeString();
+    //     }
+    //     function colorchange(){
+    //         const arr=["black","white","blue","green","grey","yellow","red"];
+    //         const randomcolor=Math.floor(Math.random()*arr.length)
+    //         document.body.style.backgroundColor=arr[randomcolor]
+    
+    //     }
+    //     let colorStop;
+    //     let timestop;
+    //     time.addEventListener('click',()=>{
+    //         if(!timestop){
+    //          timestop=setInterval(show,1000);
+    //         }
+    //         if(!colorStop)
+    //        colorStop=setInterval(colorchange,1000);
+                
+    //     })
+
+    // //   setTimeout=>clearTimeout(setTimeout)
+    // //   setInterval=clearInterval(setInterval)
+    //        // clearTimeout(changeMe)
+</script>
+</html>
